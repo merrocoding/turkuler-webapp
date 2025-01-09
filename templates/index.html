@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türkü Sözü Arama</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Türkü Sözü Arama</h1>
+        </header>
+        <div class="filter-section glass">
+            <form id="search-form">
+                <div class="form-group">
+                    <label for="style">Tarz:</label>
+                    <select id="style">
+                        <option value="Hepsi">Hepsi</option>
+                        <option value="Bozlak">Bozlak</option>
+                        <option value="Deyiş">Deyiş</option>
+                        <option value="Hareketli">Hareketli</option>
+                        <option value="Klasik">Klasik</option>
+                        <option value="Sol">Sol</option>
+                        <option value="Uzun Hava">Uzun Hava</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="artist">Sanatçı:</label>
+                    <select id="artist">
+                        <option value="Hepsi">Hepsi</option>
+                        <option value="Ahmet Kaya">Ahmet Kaya</option>
+                        <option value="Ali Ekber Cicek">Ali Ekber Cicek</option>
+                        <option value="Ali Kiziltug">Ali Kiziltug</option>
+                        <option value="Anonim / Diger">Anonim / Diger</option>
+                        <option value="Arif Sag">Arif Sag</option>
+                        <option value="Cengiz Ozkan">Cengiz Ozkan</option>
+                        <option value="Daimi">Daimi</option>
+                        <option value="Davut Sulari">Davut Sulari</option>
+                        <option value="Dertli Divani">Dertli Divani</option>
+                        <option value="Emekci">Emekci</option>
+                        <option value="Erdal Erzincan">Erdal Erzincan</option>
+                        <option value="Erkan Ogur / Ismail Hakki">Erkan Ogur / Ismail Hakki</option>
+                        <option value="Mahzuni Serif">Mahzuni Serif</option>
+                        <option value="Mercan Erzincan">Mercan Erzincan</option>
+                        <option value="Muhlis Akarsu">Muhlis Akarsu</option>
+                        <option value="Musa Eroglu">Musa Eroglu</option>
+                        <option value="Neset Ertas">Neset Ertas</option>
+                        <option value="Nesimi">Nesimi</option>
+                        <option value="Sabaht Akkiraz">Sabaht Akkiraz</option>
+                        <option value="Tolga Sag">Tolga Sag</option>
+                        <option value="Yilmaz Celik">Yilmaz Celik</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="technique">Teknik:</label>
+                    <select id="technique">
+                        <option value="Hepsi">Hepsi</option>
+                        <option value="Bozlak">Bozlak</option>
+                        <option value="Cura">Cura</option>
+                        <option value="Kara Duzen">Kara Duzen</option>
+                        <option value="Kisa">Kisa</option>
+                        <option value="Pence">Pence</option>
+                        <option value="Selpe">Selpe</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="popularity">Popülerlik:</label>
+                    <select id="popularity">
+                        <option value="Hepsi">Hepsi</option>
+                        <option value="Evet">Evet</option>
+                        <option value="Hayır">Hayır</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="keyword">Anahtar Kelime:</label>
+                    <input type="text" id="keyword" placeholder="Söz arayın...">
+                </div>
+                <button type="submit" class="primary-button">Ara</button>
+            </form>
+        </div>
+
+        <div class="matching-results-section glass">
+            <h2>Eşleşen Sonuçlar</h2>
+            <select id="matching-results">
+                <option value="">-- Bir Eşleşme Seçin --</option>
+            </select>
+        </div>
+
+        <div class="details-section glass">
+            <h2>Detaylar</h2>
+            <div class="details-card">
+                <p><strong>Türkü Adı:</strong> <span id="song-name"></span></p>
+                <p><strong>Sanatçı:</strong> <span id="artist-detail"></span></p>
+                <p><strong>Sözler:</strong></p>
+                <pre id="lyrics-detail"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
